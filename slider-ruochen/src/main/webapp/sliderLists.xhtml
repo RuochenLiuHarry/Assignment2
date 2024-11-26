@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- Web Assignment1 -->
+<!-- studentName: ruochenLiu -->
+<!-- studentNum: 041088466 -->
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <title>Slider List</title>
+</h:head>
+<h:body>
+    <h1>Slider List</h1>
+    
+    <!-- 将 Create New Slider 链接放入 <h:form> 标签内 -->
+    <h:form>
+        <h:commandLink value="Create New Slider" action="sliderCreate?faces-redirect=true" />
+    </h:form>
+
+    <!-- 包含数据表格在 <h:form> 中 -->
+    <h:form>
+        <h:dataTable value="#{sliderBean.sliders}" var="slider" border="1">
+            <h:column>
+                <f:facet name="header">ID</f:facet>
+                #{slider.id}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Size</f:facet>
+                #{slider.size}
+            </h:column>
+            <h:column>
+                <f:facet name="header">X Position</f:facet>
+                #{slider.x}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Y Position</f:facet>
+                #{slider.y}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Current Travel</f:facet>
+                #{slider.currentTravel}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Max Travel</f:facet>
+                #{slider.maxTravel}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Actions</f:facet>
+                <h:commandLink value="Edit" action="#{sliderBean.editSlider(slider)}" />
+                |
+                <h:commandLink value="Delete" action="#{sliderBean.deleteSlider(slider)}" />
+            </h:column>
+        </h:dataTable>
+    </h:form>
+
+</h:body>
+</html>
+

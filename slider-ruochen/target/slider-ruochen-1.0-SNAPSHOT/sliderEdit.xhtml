@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- Web Assignment1 -->
+<!-- studentName: ruochenLiu -->
+<!-- studentNum: 041088466 -->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+    <title>Edit Slider</title>
+</h:head>
+<h:body>
+    <h1>Edit Slider</h1>
+    <h:form>
+        <h:panelGrid columns="2">
+            <h:outputLabel for="size" value="Size:" />
+            <h:inputText id="size" value="#{sliderBean.slider.size}" />
+
+            <h:outputLabel for="x" value="X Position:" />
+            <h:inputText id="x" value="#{sliderBean.slider.x}" />
+
+            <h:outputLabel for="y" value="Y Position:" />
+            <h:inputText id="y" value="#{sliderBean.slider.y}" />
+
+            <h:outputLabel for="maxTravel" value="Max Travel:" />
+            <h:inputText id="maxTravel" value="#{sliderBean.slider.maxTravel}" />
+        </h:panelGrid>
+        <h:commandButton value="Update" action="#{sliderBean.updateSlider}" />
+        <h:commandLink value="Cancel" action="sliderLists?faces-redirect=true" immediate="true" />
+    </h:form>
+</h:body>
+</html>
+

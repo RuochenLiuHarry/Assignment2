@@ -1,0 +1,9 @@
+cst8218\ruochen\slider\resources\JakartaEE10Resource.class
+cst8218\ruochen\slider\JakartaRestConfiguration.class
+cst8218\ruochen\slider\presentation\SliderBean.class
+cst8218\ruochen\slider\business\AbstractFacade.class
+cst8218\ruochen\slider\business\SliderFacade.class
+cst8218\ruochen\slider\rest\SliderFacadeREST.class
+cst8218\ruochen\slider\entity\Slider.class
+cst8218\ruochen\slider\business\SliderGame$1.class
+cst8218\ruochen\slider\business\SliderGame.class

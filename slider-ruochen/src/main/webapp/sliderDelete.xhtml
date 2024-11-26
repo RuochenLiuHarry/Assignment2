@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- Web Assignment1 -->
+<!-- studentName: ruochenLiu -->
+<!-- studentNum: 041088466 -->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+    <title>Delete Slider</title>
+</h:head>
+<h:body>
+    <h1>Delete Slider</h1>
+    <h:form>
+        <h:panelGrid columns="2">
+            <h:outputLabel value="Are you sure you want to delete the following Slider?" />
+            <h:outputText value="" />
+
+            <h:outputLabel value="ID:" />
+            <h:outputText value="#{sliderBean.slider.id}" />
+
+            <h:outputLabel value="Size:" />
+            <h:outputText value="#{sliderBean.slider.size}" />
+
+            <h:outputLabel value="X Position:" />
+            <h:outputText value="#{sliderBean.slider.x}" />
+
+            <h:outputLabel value="Y Position:" />
+            <h:outputText value="#{sliderBean.slider.y}" />
+
+            <h:outputLabel value="Max Travel:" />
+            <h:outputText value="#{sliderBean.slider.maxTravel}" />
+        </h:panelGrid>
+        <h:commandButton value="Delete" action="#{sliderBean.confirmDelete}" />
+        <h:commandLink value="Cancel" action="sliderLists?faces-redirect=true" immediate="true"/>
+    </h:form>
+</h:body>
+</html>
